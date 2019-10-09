@@ -19,7 +19,14 @@ class  myApp  extends StatelessWidget {
 appBar: AppBar(
 
   title: Text(
-    "Welcome",
+    "Home Page",
+    style: TextStyle(
+      fontSize: 18.5,
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.bold,
+      color: Colors.black87,
+
+    ),
 
   ),
 
@@ -30,21 +37,47 @@ backgroundColor: Colors.yellow,
 
 
 body: Center(
-child: Text(
-  "Todays day two of Flutter and Dart , lets learn with fun..",
-     style: TextStyle(
-        color: Colors.green,
-        fontSize: 40.5,
-        fontStyle: FontStyle.italic,
-        fontWeight: FontWeight.bold,
-        wordSpacing: 5.6,
-        fontFamily: "Times New Roman",
-     ),    
 
-    
+  child: RaisedButton(
+shape: Border.all(width: 2.0,color: Colors.deepOrange),
+padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 10.5),
+color: Colors.black38,
+elevation: 10.5,
+splashColor: Colors.cyan,
+onPressed: (){},
+child: Text(
+"Raised Button Test",
+style: TextStyle(
+color: Colors.white,
+fontSize: 23.5,
+fontWeight: FontWeight.bold,
+
+
 
 
 ),
+
+
+),
+
+  ),
+// child: FlatButton(
+//   color: Colors.black87,
+//   splashColor: Colors.white,
+// onPressed: (){},
+// child: Text(
+// "Click ME",
+// style: TextStyle(
+// color: Colors.blue,
+// fontWeight: FontWeight.bold,
+// fontSize: 20.0,
+
+
+// ),
+// ),
+
+
+// ),
   
 ),
      ),
