@@ -38,24 +38,37 @@ backgroundColor: Colors.yellow,
 
 body: Center(
 
-  child: MaterialButton(
-    onPressed: (){},
-    color: Colors.yellow,
-    padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 12.5),
-    shape: OutlineInputBorder(),
-    child: Text(
-       "This is Material Button",
-       style: TextStyle(
+  child: IconButton(
+        onPressed: (){},
+        icon: Icon(
+           Icons.account_circle,
+        
 
-            color: Colors.deepPurple,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-
-       ),
-    
-    ),
+        ), 
+         iconSize: 100.0,
+         splashColor: Colors.blue,
+         tooltip: "This is account",
 
   ),
+
+  // child: MaterialButton(
+  //   onPressed: (){},
+  //   color: Colors.yellow,
+  //   padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 12.5),
+  //   shape: OutlineInputBorder(),
+  //   child: Text(
+  //      "This is Material Button",
+  //      style: TextStyle(
+
+  //           color: Colors.deepPurple,
+  //           fontSize: 20.0,
+  //           fontWeight: FontWeight.bold,
+
+  //      ),
+    
+  //   ),
+
+  // ),
 
 //   child: RaisedButton(
 // shape: Border.all(width: 2.0,color: Colors.deepOrange),
