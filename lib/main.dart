@@ -42,10 +42,7 @@ body: Center(
     onPressed: (){},
     color: Colors.yellow,
     padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 12.5),
-    shape: RoundedRectangleBorder(
-         borderRadius: BorderRadius.circular(15.7),
-
-    ),
+    shape: OutlineInputBorder(),
     child: Text(
        "This is Material Button",
        style: TextStyle(
