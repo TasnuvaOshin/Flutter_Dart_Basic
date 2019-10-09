@@ -38,29 +38,51 @@ backgroundColor: Colors.yellow,
 
 body: Center(
 
-  child: RaisedButton(
-shape: Border.all(width: 2.0,color: Colors.deepOrange),
-padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 10.5),
-color: Colors.black38,
-elevation: 10.5,
-splashColor: Colors.cyan,
-onPressed: (){},
-child: Text(
-"Raised Button Test",
-style: TextStyle(
-color: Colors.white,
-fontSize: 23.5,
-fontWeight: FontWeight.bold,
+  child: MaterialButton(
+    onPressed: (){},
+    color: Colors.yellow,
+    padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 12.5),
+    shape: RoundedRectangleBorder(
+         borderRadius: BorderRadius.circular(15.7),
 
+    ),
+    child: Text(
+       "This is Material Button",
+       style: TextStyle(
 
+            color: Colors.deepPurple,
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
 
-
-),
-
-
-),
+       ),
+    
+    ),
 
   ),
+
+//   child: RaisedButton(
+// shape: Border.all(width: 2.0,color: Colors.deepOrange),
+// padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 10.5),
+// color: Colors.black38,
+// elevation: 10.5,
+// splashColor: Colors.cyan,
+// onPressed: (){},
+// child: Text(
+// "Raised Button Test",
+// style: TextStyle(
+// color: Colors.white,
+// fontSize: 23.5,
+// fontWeight: FontWeight.bold,
+
+
+
+
+// ),
+
+
+// ),
+
+//   ),
 // child: FlatButton(
 //   color: Colors.black87,
 //   splashColor: Colors.white,
