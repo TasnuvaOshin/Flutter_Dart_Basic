@@ -5,116 +5,61 @@ void main(){
 }
 
 
-class  myApp  extends StatelessWidget {
+
+
+ class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "tasnvaOshin",
+      
+      title: "Tasnuva App",
       theme: ThemeData(
-          primarySwatch: Colors.green,
+
+        primarySwatch: Colors.red,
 
       ),
+    
+      home: Scaffold(
 
-     home: Scaffold(
-appBar: AppBar(
+        //our app bar which will be top of your app
+      appBar: AppBar(
+      title: Text(
 
-  title: Text(
-    "Home Page",
-    style: TextStyle(
-      fontSize: 18.5,
-      fontStyle: FontStyle.normal,
-      fontWeight: FontWeight.bold,
-      color: Colors.black87,
+  "My Application",
+      ),
+      ),
+
+   body: Column(
+
+     mainAxisAlignment: MainAxisAlignment.center,
+     crossAxisAlignment: CrossAxisAlignment.stretch,
+
+     children: <Widget>[
+
+        Text(
+           "This is my Text",
+
+        ),
+
+        RaisedButton(
+
+          onPressed: (){},
+          child: Text(
+
+            "ok",
+          ),
+        )
+
+
+     ],
+     
+
+
+
+   ),
 
     ),
-
-  ),
-
-backgroundColor: Colors.yellow,
-
-),
-
-
-
-body: Center(
-
-  child: IconButton(
-        onPressed: (){},
-        icon: Icon(
-           Icons.account_circle,
-        
-
-        ), 
-         iconSize: 100.0,
-         splashColor: Colors.blue,
-         tooltip: "This is account",
-
-  ),
-
-  // child: MaterialButton(
-  //   onPressed: (){},
-  //   color: Colors.yellow,
-  //   padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 12.5),
-  //   shape: OutlineInputBorder(),
-  //   child: Text(
-  //      "This is Material Button",
-  //      style: TextStyle(
-
-  //           color: Colors.deepPurple,
-  //           fontSize: 20.0,
-  //           fontWeight: FontWeight.bold,
-
-  //      ),
-    
-  //   ),
-
-  // ),
-
-//   child: RaisedButton(
-// shape: Border.all(width: 2.0,color: Colors.deepOrange),
-// padding: EdgeInsets.symmetric(vertical: 10.5,horizontal: 10.5),
-// color: Colors.black38,
-// elevation: 10.5,
-// splashColor: Colors.cyan,
-// onPressed: (){},
-// child: Text(
-// "Raised Button Test",
-// style: TextStyle(
-// color: Colors.white,
-// fontSize: 23.5,
-// fontWeight: FontWeight.bold,
-
-
-
-
-// ),
-
-
-// ),
-
-//   ),
-// child: FlatButton(
-//   color: Colors.black87,
-//   splashColor: Colors.white,
-// onPressed: (){},
-// child: Text(
-// "Click ME",
-// style: TextStyle(
-// color: Colors.blue,
-// fontWeight: FontWeight.bold,
-// fontSize: 20.0,
-
-
-// ),
-// ),
-
-
-// ),
-  
-),
-     ),
-
-
     );
   }
 }
+
