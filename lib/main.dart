@@ -29,31 +29,36 @@ void main(){
       ),
       ),
 
-   body: Column(
+   body: Row(
+     mainAxisAlignment: MainAxisAlignment.spaceAround,
+     crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          RaisedButton(
+            onPressed: (){},
+            color: Colors.red,
+            
+            child: Text(
 
-     mainAxisAlignment: MainAxisAlignment.center,
-     crossAxisAlignment: CrossAxisAlignment.stretch,
+              "Button"
+          
+          
+            ),
+          
+     splashColor: Colors.yellow,
+           
+            
 
-     children: <Widget>[
-
-        Text(
-           "This is my Text",
-
-        ),
-
-        RaisedButton(
-
-          onPressed: (){},
-          child: Text(
-
-            "ok",
           ),
-        )
+     RaisedButton(
+            child: Text(
+
+              "Button2"
+            ),
+
+          )
 
 
-     ],
-     
-
+        ],
 
 
    ),
