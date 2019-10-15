@@ -29,39 +29,86 @@ void main(){
       ),
       ),
 
-   body: Row(
-     mainAxisAlignment: MainAxisAlignment.spaceAround,
+   body: Center(
+       child: Column(
+     
+     mainAxisAlignment: MainAxisAlignment.center,
      crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          RaisedButton(
-            onPressed: (){},
-            color: Colors.red,
-            
-            child: Text(
+          children: <Widget>[
 
-              "Button"
-          
-          
-            ),
-          
-     splashColor: Colors.yellow,
-           
-            
+                 Padding(
+                   padding: const EdgeInsets.all(30.0),
+                   child: Text(
+                      "Hello this is full description of our message . This is mainly a paragrap for test purpose im showing this tasnuva oshin",
+               style: TextStyle(
+                fontSize: 20.5,
+                fontWeight: FontWeight.bold,
+                color: Colors.redAccent,
 
-          ),
+               ),
+
+                   ),
+                 ),
+               
+               Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+               children: <Widget>[
+               
+
+
+                  RaisedButton(
+                    onPressed: (){},
+                    color: Colors.green,
+                child: Text(
+                  "Ok",
+                style: TextStyle(
+
+                  fontSize: 30.0,
+                  
+                ),
+
+                ),
+
+               ),
+
      RaisedButton(
-            child: Text(
+         onPressed: (){},
+                    color: Colors.red,
+                child: Text(
+                  "Cancel",
+                style: TextStyle(
 
-              "Button2"
-            ),
+                  fontSize: 30.0,
+                  
+                ),
 
-          )
+                ),
+
+               )
 
 
-        ],
+
+               ],
+
+
+
+               )
+
+
+              
+
+
+
+
+
+
+          ],
+
+       ),
 
 
    ),
+
 
     ),
     );
