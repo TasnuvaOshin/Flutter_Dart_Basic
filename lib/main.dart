@@ -1,122 +1,50 @@
               import 'package:flutter/material.dart';
-              import 'dart:math';
+
+//now we will work on image how image works
 
               void main(){
 
                 runApp(myApp());
               }
 
-    class  myApp  extends StatefulWidget {
-      @override
-      _State createState() => _State();
-    }
-
-    class _State extends State<myApp> {
-      @override
-      Widget build(BuildContext context) {
-        return MaterialApp(
-          theme: ThemeData(
-            primarySwatch: Colors.cyan,
-          ),
-          title: "TasDev",
-          home: MainPage(),
-          
-        );
-      }
-    }
-
-
-    class MainPage extends StatefulWidget {
-      @override
-      _MainPageState createState() => _MainPageState();
-    }
-
-    class _MainPageState extends State<MainPage> {
-  int index;
-  Color colorNow;
-      List<Color> value = [
-            Color(0xfff44336),
-              Color(0xeef44336),
-              Color(0xccf44336),
-                Color(0xddf44336),
-                Color(0xaaf44336),
-                  Color(0xaef44336),
-
-      ];
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-
-          backgroundColor: colorNow,
-          appBar: AppBar(
-            title: Text(
-              "Main Page",
-            ),
-
-          ),
-          
-
-          body: Center(
+ 
+class myApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
             
-              
-              child: Column(
+         title: "Tasnu App",
+         theme: ThemeData(
+          primarySwatch: Colors.green,
+      
 
-                mainAxisAlignment: MainAxisAlignment.center,
+         ),
 
-                      
-                        children: <Widget>[
-                         
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            
-                            "We Will Change the Background Color",
-                            
-                            style: TextStyle(
-                              fontSize: 20.5,
-                            
-                            ),
-                          
-                                
-                          ),
-                        ),
-                          
+         home: Scaffold(
 
-                          RaisedButton(
-                          
-                            onPressed:  ChangeColorValue,
-                                                      color: Colors.cyan,
-                                                      child: Text(
-                            
-                                                                                    
-                                                        "Press Me ",
-                                                        style: TextStyle(
-                                                          color: Colors.black87,
-                                                          fontSize: 18.0,
-                                                        
-                                                        ),
-                                                      ),
-                                                    )
-                                                    ],
-                            
-                                        ),
-                            
-                            
-                                    ),
-                                  );
-                                }
-                              
-                              void ChangeColorValue() {
+           appBar: AppBar(
 
-                                setState(() {
-                                
-                               index = Random().nextInt(value.length);
-                               colorNow = value[index];
+             title: Text(
+               
+               "My App",
+
+             ),
+
+             backgroundColor: Colors.cyan,
+           ),
+
+           body: Center(
+child: Image.asset('assets/images/static_img_2.png'),
+
+),
+         ),
 
 
-                                });
-                                }
+
+
+    );
   }
+}
 
 
             
