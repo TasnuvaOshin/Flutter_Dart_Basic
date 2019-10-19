@@ -28,11 +28,17 @@ class myApp extends StatelessWidget {
 
 
 class MyHome extends StatefulWidget {
+
+
   @override
   _MyHomeState createState() => _MyHomeState();
 }
 
 class _MyHomeState extends State<MyHome> {
+
+     String MyValue;
+     String UpdateValue;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +56,8 @@ class _MyHomeState extends State<MyHome> {
             
 child: Column(
 
-            
+           
+
 
 mainAxisAlignment: MainAxisAlignment.center,
 crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,7 +67,7 @@ crossAxisAlignment: CrossAxisAlignment.center,
 
                Text(
                         
-                 "This is Our Text Writing example",
+                    "$UpdateValue",
                  style: TextStyle(
                         color: Colors.black87,
                         fontSize: 18.5,
@@ -75,6 +82,11 @@ crossAxisAlignment: CrossAxisAlignment.center,
                  padding: const EdgeInsets.all(16.0),
                  child: TextField(
 
+                      onChanged: (text){
+                      MyValue = text;
+                        
+
+                      },
                    decoration: InputDecoration(
                         hintText: "Enter your Name",
                         border: OutlineInputBorder(),
@@ -91,17 +103,45 @@ crossAxisAlignment: CrossAxisAlignment.center,
                  ),
                ),
               
-             
-               
+              RaisedButton(
+                onPressed: ClickMe,
+                                    
+                                  child: Text(
+                                     "Click Here",
+                
+                                     style: TextStyle(
+                
+                                      fontSize: 18.2,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black87,
+                                     ),
+                                  ),
+                                  
+                
+                              )
+                             
+                               
+                
+                             ],
+                           ),
+                
+                
+                           )
+                
+                    );
+                  }
+                
+                  ClickMe() {
 
-             ],
-           ),
+                    setState(() {
+                      
+                    UpdateValue = MyValue;
+                    });
 
 
-           )
 
-    );
-  }
+
+                  }
 }
 
 
