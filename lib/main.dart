@@ -20,27 +20,85 @@ class myApp extends StatelessWidget {
 
          ),
 
-         home: Scaffold(
+            home: MyHome(),     //home will be stateful means can be change on run time 
+
+    );
+  }
+}
+
+
+class MyHome extends StatefulWidget {
+  @override
+  _MyHomeState createState() => _MyHomeState();
+}
+
+class _MyHomeState extends State<MyHome> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
 
            appBar: AppBar(
+          title: Text("Home Bar"),
+          backgroundColor: Colors.black38,
 
-             title: Text(
-               
-               "My App",
-
-             ),
-
-             backgroundColor: Colors.cyan,
            ),
 
+
            body: Center(
-child: Image.asset('assets/images/static_img_2.png'),
+  
+            
+child: Column(
 
-),
-         ),
+            
+
+mainAxisAlignment: MainAxisAlignment.center,
+crossAxisAlignment: CrossAxisAlignment.center,
+
+             children: <Widget>[   
+            
+
+               Text(
+                        
+                 "This is Our Text Writing example",
+                 style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 18.5,
+                          
+                        
+
+                 ),
+                 textAlign: TextAlign.center,
+               ),
+
+               Padding(
+                 padding: const EdgeInsets.all(16.0),
+                 child: TextField(
+
+                   decoration: InputDecoration(
+                        hintText: "Enter your Name",
+                        border: OutlineInputBorder(),
+                        labelText: "Usernames",
+                         prefixIcon: Icon(Icons.supervised_user_circle),
+                   ),
+                     autocorrect: true,
+                     autofocus: true,
+                     style: TextStyle(
+                     color: Colors.black87,
+                     fontSize: 20.2,
+                     
+                   ),
+                 ),
+               ),
+              
+             
+               
+
+             ],
+           ),
 
 
-
+           )
 
     );
   }
